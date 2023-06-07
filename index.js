@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 const shoeRouter = require('./routes/shoesRoutes');
 
-const PORT = 8000;
+const PORT = 3001;
 const MONGO_URL = 'mongodb+srv://defigueiredojoaopedro:wDfMmBxYYDv8za7I@sapatos.edkmlrf.mongodb.net/Shoes?retryWrites=true&w=majority';
 
 app.use(bodyParser.json());
@@ -18,9 +18,7 @@ mongoose
     .then(con => {
         console.log("Successfully connected to the db");
     })
-    .catch(err => (console.log(err)));
-
-
+    .catch(err => console.log(err));
 
 // 3) Route
 app.use('/api/shoes', shoeRouter);
@@ -29,6 +27,9 @@ app.get('/health', (req, res) => {
     res.status(200).json({ message: "working fine...", app: "loja de sapatos" });
 });
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+
+// Exporting the server instance for testing
+module.exports = server;
