@@ -64,7 +64,7 @@ exports.updateShoe = async (req, res) => {
             new: true,
             runValidators: true
         })
-
+            //botão para atualizar as informações do sapato
         res.status(200).json({
             status: 'success',
             data: {
