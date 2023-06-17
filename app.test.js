@@ -35,7 +35,7 @@ describe("Sapatos API", () => {
                 );
             });
     });
-
+        //teste da havaianas de pau, contendo nome, tamnho e marca do tenis, como solicitado pela pesquisa.
     it('POST /api/shoes/ --> create sapato', () => {
         return request(app)
             .post('/api/shoes/')
@@ -64,7 +64,7 @@ describe("Sapatos API", () => {
             });
     });
 
-
+        //teste do tenis da nasa, não possui marca ou tamanho
     it('PATCH /api/shoes/ --> update sapato', () => {
         return request(app)
             .patch('/api/shoes/647e591c440534013e6eb9a9')
@@ -90,7 +90,7 @@ describe("Sapatos API", () => {
                 );
             });
     });
-
+        //apagar algum sapato
     it('DELETE /api/shoes/:id --> delete sapato', () => {
         return request(app)
             .delete("/api/shoes/647e591c440534013e6eb9a9")
