@@ -2,7 +2,7 @@ const express = require('express');
 const shoesController = require('./../controller/shoesController');
 
 const router = express.Router();
-
+//rotas
 router
     .route('/')
     .get(shoesController.getAllShoes)
@@ -14,4 +14,4 @@ router
     .patch(shoesController.updateShoe)
     .delete(shoesController.deleteShoe);
 
-module.exports = router;
+module.exports = router; 
