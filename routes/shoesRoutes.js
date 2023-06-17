@@ -3,12 +3,12 @@ const shoesController = require('./../controller/shoesController');
 
 const router = express.Router();
 //rotas
-router
+router // /api/shoes/
     .route('/')
     .get(shoesController.getAllShoes)
     .post(shoesController.createShoe);
 
-router
+router // /api/shoes/:id
     .route('/:id')
     .get(shoesController.getShoe)
     .patch(shoesController.updateShoe)
