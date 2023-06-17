@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+//modelos de sapato: nome, tamanhos e marca.
 const shoeSchema = new mongoose.Schema({
     name: {
         type: String,
