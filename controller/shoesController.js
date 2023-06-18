@@ -38,7 +38,7 @@ exports.getShoe = async (req, res) => {
         })
     }
 };
-
+//adicionar sapato
 exports.createShoe = async (req, res) => {
     try {
         const newShoe = await Shoe.create(req.body);
@@ -57,14 +57,14 @@ exports.createShoe = async (req, res) => {
     }
 
 };
-
+//botão para atualizar as informações do sapato
 exports.updateShoe = async (req, res) => {
     try{
         const updatedShoe = await Shoe.findByIdAndUpdate(req.params.id, req.body, {
             new: true,
             runValidators: true
         })
-            //botão para atualizar as informações do sapato
+            
         res.status(200).json({
             status: 'success',
             data: {
@@ -80,7 +80,7 @@ exports.updateShoe = async (req, res) => {
         })
     }
 };
-
+//opção para deletar algum sapato 
 exports.deleteShoe = async (req, res) => {
     try{
         await Shoe.findByIdAndRemove(req.params.id)
