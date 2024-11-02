@@ -10,7 +10,7 @@ const shoeRouter = require('./routes/shoesRoutes');
 const PORT = 3001;
 // Voce pode alterar a URL do banco de dados caso queira usar o seu proprio
 // Necessita de uma autorizaçao de ip do host para poder utilizar
-const MONGO_URL = 'mongodb+srv://defigueiredojoaopedro:wDfMmBxYYDv8za7I@sapatos.edkmlrf.mongodb.net/Shoes?retryWrites=true&w=majority';
+const MONGO_URL = "url";
 
 app.use(bodyParser.json());
 app.use(cors());
